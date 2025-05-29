@@ -12,6 +12,7 @@ import {
   StartCountdownButton,
   TaskInput,
 } from './styles'
+import { useState } from 'react'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'Informe a tarefa'),
@@ -21,7 +22,7 @@ const newCycleFormValidationSchema = zod.object({
     .max(90, 'O ciclo precisa ser no máximo 90 minutos'),
 })
 
-/* interface NewCycleFormData {
+/* interface NewCycleFormData { // Pode usar esse para resolver o problema de tipo, pois typeScript não entende JS
   task: string
   minutesAmount: number
 } */
